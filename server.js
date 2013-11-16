@@ -2,7 +2,11 @@
 var yetify = require('yetify'),
     config = require('getconfig'),
     uuid = require('node-uuid'),
-    io = require('socket.io').listen(config.server.port);
+    app = require('express')(),
+    server = require('http').createServer(app),
+    io = require('socket.io').listen(server);
+
+server.listen(config.server.port);
 
 function describeRoom(name) {
     var clients = io.sockets.clients(name);
