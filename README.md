@@ -9,6 +9,8 @@ npm install getconfig
 
 npm install node-uuid
 
+npm install socket.io
+
 # start/stop server command
 
 ./node_modules/forever/bin/forever start server.js
