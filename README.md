@@ -1,3 +1,20 @@
+# installation
+`npm install forever
+
+npm install express
+
+npm install yetify
+
+npm install getconfig
+
+npm install node-uuid`
+
+# start/stop server command
+
+`./node_modules/forever/bin/forever start server.js
+
+./node_modules/forever/bin/forever stop server.js`
+
 # signalmaster
 
 A simple signaling server for clients to connect and do signaling for WebRTC.
