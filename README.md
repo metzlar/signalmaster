@@ -1,5 +1,5 @@
 # installation
-`npm install forever
+npm install forever
 
 npm install express
 
@@ -7,13 +7,13 @@ npm install yetify
 
 npm install getconfig
 
-npm install node-uuid`
+npm install node-uuid
 
 # start/stop server command
 
-`./node_modules/forever/bin/forever start server.js
+./node_modules/forever/bin/forever start server.js
 
-./node_modules/forever/bin/forever stop server.js`
+./node_modules/forever/bin/forever stop server.js
 
 # signalmaster
 
