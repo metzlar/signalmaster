@@ -1,17 +1,24 @@
 /*global console*/
 
 var express = require('express');
-var http = require('http');
+var https = require('https');
 
+var fs = require('fs');
 var yetify = require('yetify');
 var config = require('getconfig');
 var uuid = require('node-uuid');
 
+// This line is from the Node.js HTTPS documentation.
+var options = {
+    key: fs.readFileSync(config.sslServer.sslKey),
+    cert: fs.readFileSync(config.sslServer.sslCert)
+};
+
 // Create a service (the app object is just a callback).
 var app = express();
 
-// Create an HTTP service.
-var server = http.createServer(app).listen(config.server.port);
+// Create an HTTPS service identical to the HTTP service.
+var server = https.createServer(options, app).listen(config.sslServer.port);
 
 var io = require('socket.io').listen(server);
 
@@ -103,5 +110,5 @@ io.sockets.on('connection', function (client) {
 });
 
 if (config.uid) process.setuid(config.uid);
-console.log(yetify.logo() + ' -- signal master is running on port ' + config.server.port);
+console.log(yetify.logo() + ' -- ssl signal master is running on port ' + config.sslServer.port);
 

@@ -2,5 +2,10 @@
     "isDev": true,
     "server": {
         "port": 7777
-    }
+    },
+    "sslServer": {
+        "port": 7778,
+        "sslCert": "/usr/local/keystore/server.crt",
+        "sslKey" : "/usr/local/keystore/server.key"
+    }	
 }
