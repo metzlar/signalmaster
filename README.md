@@ -1,7 +1,9 @@
 # installation
-npm install forever
+npm install -g forever
 
-npm install express
+npm install -g express
+
+npm install -g socket.io
 
 npm install yetify
 
@@ -9,13 +11,11 @@ npm install getconfig
 
 npm install node-uuid
 
-npm install socket.io
-
 # start/stop server command
 
-./node_modules/forever/bin/forever start server.js
+forever start server.js
 
-./node_modules/forever/bin/forever stop server.js
+forever stop server.js
 
 # signalmaster
 

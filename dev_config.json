@@ -5,7 +5,7 @@
     },
     "sslServer": {
         "port": 7778,
-        "sslCert": "/usr/local/keystore/server.crt",
-        "sslKey" : "/usr/local/keystore/server.key"
+        "sslCert": "/usr/local/webrtc/signalmaster/keystore/server.crt",
+        "sslKey" : "/usr/local/webrtc/signalmaster/keystore/server.key"
     }	
 }
